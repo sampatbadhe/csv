@@ -61,6 +61,36 @@
 
   <ul class="link-list" role="directory">
     <li><a href="#label-News">News</a>
+    <li><a href="#label-3.2.7+-+2023-06-26">3.2.7 - 2023-06-26</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Fixes">Fixes</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.6+-+2022-12-08">3.2.6 - 2022-12-08</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Fixes">Fixes</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.5+-+2022-08-26">3.2.5 - 2022-08-26</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.4+-+2022-08-22">3.2.4 - 2022-08-22</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Fixes">Fixes</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.3+-+2022-04-09">3.2.3 - 2022-04-09</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Fixes">Fixes</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.2+-+2021-12-24">3.2.2 - 2021-12-24</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Fixes">Fixes</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.1+-+2021-10-23">3.2.1 - 2021-10-23</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Thanks">Thanks</a>
+    <li><a href="#label-3.2.0+-+2021-06-06">3.2.0 - 2021-06-06</a>
+    <li><a href="#label-Improvements">Improvements</a>
+    <li><a href="#label-Fixes">Fixes</a>
+    <li><a href="#label-Thanks">Thanks</a>
     <li><a href="#label-3.1.9+-+2020-11-23">3.1.9 - 2020-11-23</a>
     <li><a href="#label-Fixes">Fixes</a>
     <li><a href="#label-Thanks">Thanks</a>
@@ -169,6 +199,227 @@
 <main role="main" aria-label="Page NEWS.md">
 
 <h1 id="label-News">News<span><a href="#label-News">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<h2 id="label-3.2.7+-+2023-06-26">3.2.7 - 2023-06-26<span><a href="#label-3.2.7+-+2023-06-26">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Removed an unused internal variable. <a href="https://github.com/ruby/csv/issues/273">GH-273</a> [Patch by Mau Magnaguagno]</p>
+</li><li>
+<p>Changed to use <code>https://</code> instead of <code>http://</code> in documents. <a href="https://github.com/ruby/csv/issues/274">GH-274</a> [Patch by Vivek Bharath Akupatni]</p>
+</li><li>
+<p>Added prefix to a helper module in test. <a href="https://github.com/ruby/csv/issues/278">GH-278</a> [Patch by Luke Gruber]</p>
+</li><li>
+<p>Added a documentation for <code>liberal_parsing: {backslash_quotes: true}. {GH-280}[https://github.com/ruby/csv/issues/280]</code> [Patch by Mark Schneider]</p>
+</li></ul>
+
+<h3 id="label-Fixes">Fixes<span><a href="#label-Fixes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed a wrong execution result in documents. <a href="https://github.com/ruby/csv/issues/276">GH-276</a> [Patch by Yuki Tsujimoto]</p>
+</li><li>
+<p>Fixed a bug that the same line is used multiple times. <a href="https://github.com/ruby/csv/issues/279">GH-279</a> [Reported by Gabriel Nagy]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Mau Magnaguagno</p>
+</li><li>
+<p>Vivek Bharath Akupatni</p>
+</li><li>
+<p>Yuki Tsujimoto</p>
+</li><li>
+<p>Luke Gruber</p>
+</li><li>
+<p>Mark Schneider</p>
+</li><li>
+<p>Gabriel Nagy</p>
+</li></ul>
+
+<h2 id="label-3.2.6+-+2022-12-08">3.2.6 - 2022-12-08<span><a href="#label-3.2.6+-+2022-12-08">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p><code>CSV#read</code> consumes the same lines with other methods like <code>CSV#shift</code>. [<a href="https://github.com/ruby/csv/issues/258">GitHub#258</a>] [Reported by Lhoussaine Ghallou]</p>
+</li><li>
+<p>All <code>Enumerable</code> based methods consume the same lines with other methods. This may have a performance penalty. [<a href="https://github.com/ruby/csv/issues/260">GitHub#260</a>] [Reported by Lhoussaine Ghallou]</p>
+</li><li>
+<p>Simplify some implementations. [<a href="https://github.com/ruby/csv/pull/262">GitHub#262</a>] [<a href="https://github.com/ruby/csv/pull/263">GitHub#263</a>] [Patch by Mau Magnaguagno]</p>
+</li></ul>
+
+<h3 id="label-Fixes">Fixes<span><a href="#label-Fixes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed <code>CSV.generate_lines</code> document. [<a href="https://github.com/ruby/csv/pull/257">GitHub#257</a>] [Patch by Sampat Badhe]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Sampat Badhe</p>
+</li><li>
+<p>Lhoussaine Ghallou</p>
+</li><li>
+<p>Mau Magnaguagno</p>
+</li></ul>
+
+<h2 id="label-3.2.5+-+2022-08-26">3.2.5 - 2022-08-26<span><a href="#label-3.2.5+-+2022-08-26">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added <code>CSV.generate_lines</code>. [<a href="https://github.com/ruby/csv/issues/255">GitHub#255</a>] [Reported by OKURA Masafumi] [<a href="https://github.com/ruby/csv/pull/256">GitHub#256</a>] [Patch by Eriko Sugiyama]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>OKURA Masafumi</p>
+</li><li>
+<p>Eriko Sugiyama</p>
+</li></ul>
+
+<h2 id="label-3.2.4+-+2022-08-22">3.2.4 - 2022-08-22<span><a href="#label-3.2.4+-+2022-08-22">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Cleaned up internal implementations. [<a href="https://github.com/ruby/csv/pull/249">GitHub#249</a>] [<a href="https://github.com/ruby/csv/pull/250">GitHub#250</a>] [<a href="https://github.com/ruby/csv/pull/251">GitHub#251</a>] [Patch by Mau Magnaguagno]</p>
+</li><li>
+<p>Added support for RFC 3339 style time. [<a href="https://github.com/ruby/csv/pull/248">GitHub#248</a>] [Patch by Thierry Lambert]</p>
+</li><li>
+<p>Added support for transcoding String <a href="CSV.html"><code>CSV</code></a>. Syntax is <code>from-encoding:to-encoding</code>. [<a href="https://github.com/ruby/csv/issues/254">GitHub#254</a>] [Reported by Richard Stueven]</p>
+</li><li>
+<p>Added quoted information to <code>CSV::FieldInfo</code>. [<a href="https://github.com/ruby/csv/pull/253">GitHub#254</a>] [Reported by Hirokazu SUZUKI]</p>
+</li></ul>
+
+<h3 id="label-Fixes">Fixes<span><a href="#label-Fixes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed a link in documents. [<a href="https://github.com/ruby/csv/pull/244">GitHub#244</a>] [Patch by Peter Zhu]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Peter Zhu</p>
+</li><li>
+<p>Mau Magnaguagno</p>
+</li><li>
+<p>Thierry Lambert</p>
+</li><li>
+<p>Richard Stueven</p>
+</li><li>
+<p>Hirokazu SUZUKI</p>
+</li></ul>
+
+<h2 id="label-3.2.3+-+2022-04-09">3.2.3 - 2022-04-09<span><a href="#label-3.2.3+-+2022-04-09">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added contents summary to <code>CSV::Table#inspect</code>. [GitHub#229][Patch by Eriko Sugiyama] [GitHub#235][Patch by Sampat Badhe]</p>
+</li><li>
+<p>Suppressed <code>$INPUT_RECORD_SEPARATOR</code> deprecation warning by <code>Warning.warn</code>. [GitHub#233][Reported by Jean byroot Boussier]</p>
+</li><li>
+<p>Improved error message for liberal parsing with quoted values. [GitHub#231][Patch by Nikolay Rys]</p>
+</li><li>
+<p>Fixed typos in documentation. [GitHub#236][Patch by Sampat Badhe]</p>
+</li><li>
+<p>Added <code>:max_field_size</code> option and deprecated <code>:field_size_limit</code> option. [GitHub#238][Reported by Dan Buettner]</p>
+</li><li>
+<p>Added <code>:symbol_raw</code> to built-in header converters. [GitHub#237][Reported by taki] [GitHub#239][Patch by Eriko Sugiyama]</p>
+</li></ul>
+
+<h3 id="label-Fixes">Fixes<span><a href="#label-Fixes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed a bug that some texts may be dropped unexpectedly. [Bug #<a href="ruby-core:105587">18245]</a>[Reported by Hassan Abdul Rehman]</p>
+</li><li>
+<p>Fixed a bug that <code>:field_size_limit</code> doesn&#39;t work with not complex row. [GitHub#238][Reported by Dan Buettner]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Hassan Abdul Rehman</p>
+</li><li>
+<p>Eriko Sugiyama</p>
+</li><li>
+<p>Jean byroot Boussier</p>
+</li><li>
+<p>Nikolay Rys</p>
+</li><li>
+<p>Sampat Badhe</p>
+</li><li>
+<p>Dan Buettner</p>
+</li><li>
+<p>taki</p>
+</li></ul>
+
+<h2 id="label-3.2.2+-+2021-12-24">3.2.2 - 2021-12-24<span><a href="#label-3.2.2+-+2021-12-24">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added a validation for invalid option combination. [GitHub#225][Patch by adamroyjones]</p>
+</li><li>
+<p>Improved documentation for developers. [GitHub#227][Patch by Eriko Sugiyama]</p>
+</li></ul>
+
+<h3 id="label-Fixes">Fixes<span><a href="#label-Fixes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed a bug that all of <code>ARGF</code> contents may not be consumed. [GitHub#228][Reported by Rafael Navaza]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>adamroyjones</p>
+</li><li>
+<p>Eriko Sugiyama</p>
+</li><li>
+<p>Rafael Navaza</p>
+</li></ul>
+
+<h2 id="label-3.2.1+-+2021-10-23">3.2.1 - 2021-10-23<span><a href="#label-3.2.1+-+2021-10-23">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>doc: Fixed wrong class name. [GitHub#217][Patch by Vince]</p>
+</li><li>
+<p>Changed to always use <code>&quot;\n&quot;</code> for the default row separator on Ruby 3.0 or later because <code>$INPUT_RECORD_SEPARATOR</code> was deprecated since Ruby 3.0.</p>
+</li><li>
+<p>Added support for Ractor. [GitHub#218][Patch by rm155]</p>
+<ul><li>
+<p>Users who want to use the built-in converters in non-main  Ractors need to call <code>Ractor.make_shareable(CSV::Converters)</code>  and/or <code>Ractor.make_shareable(CSV::HeaderConverters)</code> before  creating non-main Ractors.</p>
+</li></ul>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Vince</p>
+</li><li>
+<p>Joakim Antman</p>
+</li><li>
+<p>rm155</p>
+</li></ul>
+
+<h2 id="label-3.2.0+-+2021-06-06">3.2.0 - 2021-06-06<span><a href="#label-3.2.0+-+2021-06-06">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Improvements">Improvements<span><a href="#label-Improvements">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p><code>CSV.open</code>: Added support for <code>:newline</code> option. [GitHub#198][Patch by Nobuyoshi Nakada]</p>
+</li><li>
+<p><code>CSV::Table#each</code>: Added support for column mode with duplicated headers. [GitHub#206][Reported by Yaroslav Berezovskiy]</p>
+</li><li>
+<p><code>Object#CSV</code>: Added support for Ruby 3.0.</p>
+</li><li>
+<p><code>CSV::Row</code>: Added support for pattern matching. [GitHub#207][Patch by Kevin Newton]</p>
+</li></ul>
+
+<h3 id="label-Fixes">Fixes<span><a href="#label-Fixes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed typos in documentation. [<a href="GitHub#205">GitHub#196]</a>[Patch by Sampat Badhe]</p>
+</li></ul>
+
+<h3 id="label-Thanks">Thanks<span><a href="#label-Thanks">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Sampat Badhe</p>
+</li><li>
+<p>Nobuyoshi Nakada</p>
+</li><li>
+<p>Yaroslav Berezovskiy</p>
+</li><li>
+<p>Kevin Newton</p>
+</li></ul>
 
 <h2 id="label-3.1.9+-+2020-11-23">3.1.9 - 2020-11-23<span><a href="#label-3.1.9+-+2020-11-23">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
@@ -721,7 +972,7 @@
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.2.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.2.1.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

@@ -91,6 +91,8 @@
     
     <li ><a href="#method-i-lineno">#lineno</a>
     
+    <li ><a href="#method-i-max_field_size">#max_field_size</a>
+    
     <li ><a href="#method-i-parse">#parse</a>
     
     <li ><a href="#method-i-quote_character">#quote_character</a>
@@ -142,6 +144,21 @@
         <dd>
         
       
+        <dt id="SCANNER_TEST_CHUNK_SIZE_NAME">SCANNER_TEST_CHUNK_SIZE_NAME
+        
+        <dd>
+        
+      
+        <dt id="SCANNER_TEST_CHUNK_SIZE_VALUE">SCANNER_TEST_CHUNK_SIZE_VALUE
+        
+        <dd>
+        
+      
+        <dt id="STRING_SCANNER_SCAN_ACCEPT_STRING">STRING_SCANNER_SCAN_ACCEPT_STRING
+        
+        <dd>
+        
+      
       </dl>
     </section>
     
@@ -174,7 +191,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 258</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 326</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">options</span>)
   <span class="ruby-ivar">@input</span> = <span class="ruby-identifier">input</span>
   <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
@@ -219,7 +236,7 @@
 
           
           <div class="method-source-code" id="column_separator-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 266</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 334</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">column_separator</span>
   <span class="ruby-ivar">@column_separator</span>
 <span class="ruby-keyword">end</span></pre>
@@ -252,9 +269,9 @@
 
           
           <div class="method-source-code" id="field_size_limit-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 278</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 346</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">field_size_limit</span>
-  <span class="ruby-ivar">@field_size_limit</span>
+  <span class="ruby-ivar">@max_field_size</span>&amp;.<span class="ruby-identifier">succ</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -285,7 +302,7 @@
 
           
           <div class="method-source-code" id="header_row-3F-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 294</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 366</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">header_row?</span>
   <span class="ruby-ivar">@use_headers</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@headers</span>.<span class="ruby-identifier">nil?</span>
 <span class="ruby-keyword">end</span></pre>
@@ -318,7 +335,7 @@
 
           
           <div class="method-source-code" id="headers-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 290</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 362</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">headers</span>
   <span class="ruby-ivar">@headers</span>
 <span class="ruby-keyword">end</span></pre>
@@ -351,7 +368,7 @@
 
           
           <div class="method-source-code" id="liberal_parsing-3F-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 306</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 378</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">liberal_parsing?</span>
   <span class="ruby-ivar">@liberal_parsing</span>
 <span class="ruby-keyword">end</span></pre>
@@ -384,7 +401,7 @@
 
           
           <div class="method-source-code" id="line-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 314</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 386</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">line</span>
   <span class="ruby-identifier">last_line</span>
 <span class="ruby-keyword">end</span></pre>
@@ -417,9 +434,42 @@
 
           
           <div class="method-source-code" id="lineno-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 310</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 382</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lineno</span>
   <span class="ruby-ivar">@lineno</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-max_field_size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">max_field_size</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="max_field_size-source">
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">max_field_size</span>
+  <span class="ruby-ivar">@max_field_size</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -450,7 +500,7 @@
 
           
           <div class="method-source-code" id="parse-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 318</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 390</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">parse</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">to_enum</span>(<span class="ruby-identifier">__method__</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
 
@@ -479,6 +529,16 @@
       <span class="ruby-identifier">lineno</span> = <span class="ruby-ivar">@lineno</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
     <span class="ruby-keyword">end</span>
     <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;Invalid byte sequence in #{@encoding}&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">MalformedCSVError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">lineno</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">UnexpectedError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">error</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@scanner</span>
+      <span class="ruby-identifier">ignore_broken_line</span>
+      <span class="ruby-identifier">lineno</span> = <span class="ruby-ivar">@lineno</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">lineno</span> = <span class="ruby-ivar">@lineno</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;This should not be happen: #{error.message}: &quot;</span>
+    <span class="ruby-identifier">message</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Please report this to https://github.com/ruby/csv/issues&quot;</span>
     <span class="ruby-identifier">raise</span> <span class="ruby-constant">MalformedCSVError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">lineno</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
@@ -511,7 +571,7 @@
 
           
           <div class="method-source-code" id="quote_character-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 274</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 342</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">quote_character</span>
   <span class="ruby-ivar">@quote_character</span>
 <span class="ruby-keyword">end</span></pre>
@@ -544,7 +604,7 @@
 
           
           <div class="method-source-code" id="return_headers-3F-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 298</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 370</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">return_headers?</span>
   <span class="ruby-ivar">@return_headers</span>
 <span class="ruby-keyword">end</span></pre>
@@ -577,7 +637,7 @@
 
           
           <div class="method-source-code" id="row_separator-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 270</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 338</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">row_separator</span>
   <span class="ruby-ivar">@row_separator</span>
 <span class="ruby-keyword">end</span></pre>
@@ -610,7 +670,7 @@
 
           
           <div class="method-source-code" id="skip_blanks-3F-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 302</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 374</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">skip_blanks?</span>
   <span class="ruby-ivar">@skip_blanks</span>
 <span class="ruby-keyword">end</span></pre>
@@ -643,7 +703,7 @@
 
           
           <div class="method-source-code" id="skip_lines-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 282</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 354</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">skip_lines</span>
   <span class="ruby-ivar">@skip_lines</span>
 <span class="ruby-keyword">end</span></pre>
@@ -676,7 +736,7 @@
 
           
           <div class="method-source-code" id="unconverted_fields-3F-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 286</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 358</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unconverted_fields?</span>
   <span class="ruby-ivar">@unconverted_fields</span>
 <span class="ruby-keyword">end</span></pre>
@@ -709,7 +769,7 @@
 
           
           <div class="method-source-code" id="use_headers-3F-source">
-            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 350</span>
+            <pre><span class="ruby-comment"># File lib/csv/parser.rb, line 432</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">use_headers?</span>
   <span class="ruby-ivar">@use_headers</span>
 <span class="ruby-keyword">end</span></pre>
@@ -732,7 +792,7 @@
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.2.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.2.1.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
