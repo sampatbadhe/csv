@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class CSV::MalformedCSVError - RDoc Documentation</title>
+<title>class CSV::InvalidEncodingError - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
@@ -63,7 +63,7 @@
   <h3>Parent</h3>
 
   
-  <p class="link">RuntimeError
+  <p class="link"><a href="MalformedCSVError.html">CSV::MalformedCSVError</a>
   
 </div>
 
@@ -83,14 +83,14 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-CSV::MalformedCSVError">
-  <h1 id="class-CSV::MalformedCSVError" class="class">
-    class CSV::MalformedCSVError
+<main role="main" aria-labelledby="class-CSV::InvalidEncodingError">
+  <h1 id="class-CSV::InvalidEncodingError" class="class">
+    class CSV::InvalidEncodingError
   </h1>
 
   <section class="description">
     
-<p>The error thrown when the parser encounters illegal <a href="../CSV.html"><code>CSV</code></a> formatting.</p>
+<p>The error thrown when the parser encounters invalid encoding in <a href="../CSV.html"><code>CSV</code></a>.</p>
 
   </section>
 
@@ -109,22 +109,9 @@
       </header>
 
       
-      <div id="attribute-i-line_number" class="method-detail">
+      <div id="attribute-i-encoding" class="method-detail">
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">line_number</span><span
-            class="attribute-access-type">[R]</span>
-        </div>
-
-        <div class="method-description">
-        
-        
-        
-        </div>
-      </div>
-      
-      <div id="attribute-i-lineno" class="method-detail">
-        <div class="method-heading attribute-method-heading">
-          <span class="method-name">lineno</span><span
+          <span class="method-name">encoding</span><span
             class="attribute-access-type">[R]</span>
         </div>
 
@@ -149,7 +136,7 @@
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(message, line_number)</span>
+            class="method-args">(encoding, line_number)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -163,16 +150,16 @@
           
             <div class="method-calls-super">
               Calls superclass method
-              
+              <a href="MalformedCSVError.html#method-c-new"><code>CSV::MalformedCSVError::new</code></a>
             </div>
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/csv.rb, line 843</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">line_number</span>)
-  <span class="ruby-ivar">@line_number</span> = <span class="ruby-identifier">line_number</span>
-  <span class="ruby-keyword">super</span>(<span class="ruby-node">&quot;#{message} in line #{line_number}.&quot;</span>)
+            <pre><span class="ruby-comment"># File lib/csv.rb, line 852</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">encoding</span>, <span class="ruby-identifier">line_number</span>)
+  <span class="ruby-ivar">@encoding</span> = <span class="ruby-identifier">encoding</span>
+  <span class="ruby-keyword">super</span>(<span class="ruby-node">&quot;Invalid byte sequence in #{encoding}&quot;</span>, <span class="ruby-identifier">line_number</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
